@@ -1,6 +1,4 @@
-// This file serves as the entry point for the game. It initializes the game by creating instances of Game and Board, and sets up event listeners for user input.
-
-// Inicialización del juego y conexión con la interfaz
+// Entry point for the 2048 game. Initializes the game, sets up event listeners for user input, and handles game restarts.
 window.addEventListener('DOMContentLoaded', () => {
     const boardElement = document.getElementById('board');
     const scoreElement = document.getElementById('score');
@@ -8,12 +6,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let game = new Game(Board, Tile, boardElement, scoreElement);
 
+    // Starts a new game instance
     function startGame() {
         game = new Game(Board, Tile, boardElement, scoreElement);
     }
 
     newGameBtn.addEventListener('click', startGame);
 
+    // Listen for keyboard input to move tiles
     document.addEventListener('keydown', (event) => {
         switch (event.key) {
             case 'ArrowUp':
