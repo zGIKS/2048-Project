@@ -83,6 +83,10 @@ class Game {
                 this.boardElement.appendChild(cell);
             }
         }
-        this.scoreElement.textContent = `Score: ${this.score}`;
+        this.scoreElement.textContent = this.score; // Only the number, no label
+        const bestScoreElement = document.getElementById('best-score');
+        if (bestScoreElement) {
+            bestScoreElement.textContent = localStorage.getItem('bestScore') || 0;
+        }
     }
 }
