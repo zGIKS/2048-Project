@@ -1,0 +1,55 @@
+@keyframes cell-move {
+  0% {
+    transform: translate(var(--from-x, 0), var(--from-y, 0));
+    z-index: 2;
+    box-shadow: 0 2px 12px #0006;
+  }
+  80% {
+    transform: translate(0, 0);
+    z-index: 2;
+    box-shadow: 0 2px 12px #0003;
+  }
+  90% {
+    transform: translate(0, 0) scale(1.04);
+    z-index: 2;
+    box-shadow: 0 2px 12px #0002;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    z-index: 1;
+    box-shadow: none;
+  }
+}
+
+@keyframes cell-appear {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.2;
+  }
+  60% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.96);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cell.move {
+  animation: cell-move 0.7s cubic-bezier(.22,1,.36,1) both;
+  will-change: transform;
+}
+
+.cell.new {
+  animation: cell-appear 0.5s cubic-bezier(.22,1,.36,1) both;
+}
+
+.cell.merge {
+  animation: cell-appear 0.5s cubic-bezier(.22,1,.36,1) both;
+  box-shadow: 0 0 0 4px #ffd70044;
+}
