@@ -1,0 +1,86 @@
+/* Estilos oscuros inspirados en GitHub Dark Theme */
+body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    background: #161b22;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px #000a;
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #58a6ff;
+    margin-bottom: 16px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 64px);
+    grid-template-rows: repeat(4, 64px);
+    gap: 10px;
+    background: #21262d;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 18px;
+}
+
+.cell {
+    width: 64px;
+    height: 64px;
+    background: #30363d;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c9d1d9;
+    transition: background 0.2s, color 0.2s;
+}
+
+.cell[data-value="2"]    { background: #161b22; color: #8b949e; }
+.cell[data-value="4"]    { background: #21262d; color: #58a6ff; }
+.cell[data-value="8"]    { background: #238636; color: #fff; }
+.cell[data-value="16"]   { background: #8957e5; color: #fff; }
+.cell[data-value="32"]   { background: #d29922; color: #fff; }
+.cell[data-value="64"]   { background: #f85149; color: #fff; }
+.cell[data-value="128"]  { background: #db6d28; color: #fff; }
+.cell[data-value="256"]  { background: #1f6feb; color: #fff; }
+.cell[data-value="512"]  { background: #a371f7; color: #fff; }
+.cell[data-value="1024"] { background: #ffa657; color: #161b22; }
+.cell[data-value="2048"] { background: #ffd700; color: #161b22; }
+
+#new-game {
+    background: #238636;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#new-game:hover {
+    background: #2ea043;
+}
+
+.score {
+    color: #c9d1d9;
+    font-size: 1.2rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
