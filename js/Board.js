@@ -7,7 +7,7 @@
  * Class representing the board and its logic for the 2048 game.
  * @class Board
  */
-class Board {
+export class Board {
     /**
      * Creates a Board instance.
      * @param {number} size - Board size (default is 4).
