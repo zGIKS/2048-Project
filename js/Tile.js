@@ -7,7 +7,7 @@
  * Represents a single tile in the 2048 game board.
  * @class Tile
  */
-class Tile {
+export class Tile {
     /**
      * Creates a new Tile instance.
      * @param {number} value - The value of the tile (default is 2).
